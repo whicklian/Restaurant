@@ -1,11 +1,29 @@
 const express = require('express');
 const cors = require('cors');
 const axios = require('axios');
+const mongoose = require('mongoose');
 require('dotenv').config();
 
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+// MongoDB Connection (Disabled as MongoDB is not installed on this system)
+/*
+mongoose.connect(process.env.MONGODB_URI)
+    .then(() => console.log('Connected to MongoDB'))
+    .catch(err => console.error('MongoDB connection error:', err));
+*/
+console.log('Using local JSON storage for database features.');
+
+// Routes
+const authRoutes = require('./routes/auth');
+const bookingRoutes = require('./routes/bookings');
+const newsletterRoutes = require('./routes/newsletter');
+
+app.use('/api/auth', authRoutes);
+app.use('/api/bookings', bookingRoutes);
+app.use('/api/newsletter', newsletterRoutes);
 
 // Safaricom Daraja Credentials from .env
 const consumerKey = process.env.DARAJA_CONSUMER_KEY;

@@ -1,0 +1,269 @@
+{
+  "users": [
+    {
+      "name": "Tester",
+      "email": "tester@example.com",
+      "password": "$2b$10$g.lVecrPwNhEmFeGlXLC.uHRG8GJkkZPdt2RAwXebnWN5OkPgz8Hi",
+      "_id": "847my171u",
+      "createdAt": "2026-03-23T15:18:23.126Z"
+    },
+    {
+      "name": "Booking Tester",
+      "email": "book@tester.com",
+      "password": "$2b$10$utr77bSjKvPmraqtJgKmjeU1V.itUm9ZsLczEOIYAJgS6vlHNsDIC",
+      "_id": "t9rg4x8dn",
+      "createdAt": "2026-03-23T15:19:39.867Z"
+    },
+    {
+      "name": "Nerio Whicklian",
+      "email": "neriowhicklian@gmail.com",
+      "password": "$2b$10$PXEwgBIojIW14Y5k9CVxruj5/Eg.N8pxH4jbU2jRrt4L.Mg0WzG4u",
+      "_id": "1b3dzbzsu",
+      "createdAt": "2026-03-23T15:57:07.229Z"
+    },
+    {
+      "name": "Cavan Ario",
+      "email": "essywhicklian@gmail.com",
+      "password": "$2b$10$KHD4mgu2w/pafEjK1DegaunkNd9fZQoTJUvjpFa/dwAUuLfbq.suq",
+      "_id": "39wxlm57b",
+      "createdAt": "2026-03-23T18:22:50.692Z"
+    }
+  ],
+  "bookings": [
+    {
+      "userId": "t9rg4x8dn",
+      "fullName": "Booking Tester",
+      "phone": "254700000000",
+      "date": "2025-12-25",
+      "amount": 2500,
+      "receiptId": "REC-XBTW12C8U",
+      "_id": "51ogznq2w",
+      "createdAt": "2026-03-23T15:19:39.957Z",
+      "status": "Confirmed"
+    },
+    {
+      "userId": "1b3dzbzsu",
+      "fullName": "Nerio Whicklian",
+      "phone": "254707848992",
+      "date": "2026-03-23",
+      "amount": 1,
+      "receiptId": "REC-YD35QGYNM",
+      "_id": "x0l8m47eq",
+      "createdAt": "2026-03-23T15:58:23.241Z",
+      "status": "Confirmed"
+    },
+    {
+      "type": "Table",
+      "userId": "1b3dzbzsu",
+      "fullName": "Whicklian Nerio",
+      "phone": "0707313452",
+      "date": "2026-03-23",
+      "amount": 0,
+      "guests": "6",
+      "time": "17:00",
+      "items": [],
+      "occasion": "birthday",
+      "requests": "",
+      "receiptId": "REC-ZWUP6Q77T",
+      "tableNumber": 10,
+      "_id": "s3fj3i7s3",
+      "createdAt": "2026-03-23T17:11:56.172Z",
+      "status": "Confirmed"
+    },
+    {
+      "type": "Table",
+      "userId": "1b3dzbzsu",
+      "fullName": "Whicklian Nerio",
+      "phone": "0707313452",
+      "date": "2026-03-23",
+      "amount": 145.87,
+      "guests": "6",
+      "time": "17:00",
+      "items": [
+        {
+          "id": 1,
+          "category": "Appetizers",
+          "title": "Bruschetta",
+          "price": 8.99,
+          "emoji": "🍞",
+          "quantity": 2
+        },
+        {
+          "id": 2,
+          "category": "Appetizers",
+          "title": "Crispy Calamari",
+          "price": 12.99,
+          "emoji": "🦑",
+          "quantity": 1
+        },
+        {
+          "id": 9,
+          "category": "Appetizers",
+          "title": "Garlic Bread",
+          "price": 5.99,
+          "emoji": "🧄",
+          "quantity": 2
+        },
+        {
+          "id": 3,
+          "category": "Mains",
+          "title": "Classic Burger",
+          "price": 14.99,
+          "emoji": "🍔",
+          "quantity": 2
+        },
+        {
+          "id": 5,
+          "category": "Mains",
+          "title": "Pasta Carbonara",
+          "price": 16.99,
+          "emoji": "🍝",
+          "quantity": 2
+        },
+        {
+          "id": 8,
+          "category": "Drinks",
+          "title": "House Red Wine",
+          "price": 9.99,
+          "emoji": "🍷",
+          "quantity": 3
+        },
+        {
+          "id": 12,
+          "category": "Drinks",
+          "title": "Fresh Mojito",
+          "price": 8.99,
+          "emoji": "🍹",
+          "quantity": 1
+        }
+      ],
+      "occasion": "birthday",
+      "requests": "",
+      "receiptId": "REC-I243LV2AW",
+      "tableNumber": 9,
+      "_id": "mnv41avpk",
+      "createdAt": "2026-03-23T17:22:32.505Z",
+      "status": "Confirmed"
+    },
+    {
+      "type": "Table",
+      "userId": "1b3dzbzsu",
+      "fullName": "Whicklian Nerio",
+      "phone": "0707313452",
+      "date": "2026-03-23",
+      "amount": 1689.8,
+      "guests": "6",
+      "time": "21:00",
+      "items": [
+        {
+          "id": 7,
+          "category": "Desserts",
+          "title": "NY Cheesecake",
+          "price": 8.99,
+          "emoji": "🍰",
+          "quantity": 4
+        },
+        {
+          "id": 11,
+          "category": "Desserts",
+          "title": "Choco Lava Cake",
+          "price": 9.99,
+          "emoji": "🫓",
+          "quantity": 6
+        },
+        {
+          "id": 8,
+          "category": "Drinks",
+          "title": "House Red Wine",
+          "price": 9.99,
+          "emoji": "🍷",
+          "quantity": 4
+        },
+        {
+          "id": 12,
+          "category": "Drinks",
+          "title": "Fresh Mojito",
+          "price": 8.99,
+          "emoji": "🍹",
+          "quantity": 6
+        }
+      ],
+      "occasion": "birthday",
+      "requests": "",
+      "receiptId": "REC-OBABXIFZK",
+      "tableNumber": 14,
+      "_id": "umr3ogokk",
+      "createdAt": "2026-03-23T17:30:09.905Z",
+      "status": "Confirmed"
+    },
+    {
+      "type": "Table",
+      "userId": "1b3dzbzsu",
+      "fullName": "Nerio Whicklian",
+      "phone": "0707313452",
+      "date": "2026-03-23",
+      "amount": 1500,
+      "guests": "4",
+      "time": "19:00",
+      "items": [],
+      "occasion": "birthday",
+      "requests": "",
+      "receiptId": "REC-FO37WH6PC",
+      "tableNumber": 12,
+      "_id": "2zm8w2d56",
+      "createdAt": "2026-03-23T17:36:16.954Z",
+      "status": "Confirmed"
+    },
+    {
+      "type": "Table",
+      "userId": "39wxlm57b",
+      "fullName": "Cavan Ario",
+      "phone": "0707313452",
+      "date": "2026-03-23",
+      "amount": 1659.84,
+      "guests": "3",
+      "time": "18:00",
+      "items": [
+        {
+          "id": 1,
+          "category": "Appetizers",
+          "title": "Bruschetta",
+          "price": 8.99,
+          "emoji": "🍞",
+          "quantity": 6
+        },
+        {
+          "id": 2,
+          "category": "Appetizers",
+          "title": "Crispy Calamari",
+          "price": 12.99,
+          "emoji": "🦑",
+          "quantity": 4
+        },
+        {
+          "id": 9,
+          "category": "Appetizers",
+          "title": "Garlic Bread",
+          "price": 5.99,
+          "emoji": "🧄",
+          "quantity": 4
+        },
+        {
+          "id": 3,
+          "category": "Mains",
+          "title": "Classic Burger",
+          "price": 14.99,
+          "emoji": "🍔",
+          "quantity": 2
+        }
+      ],
+      "occasion": "birthday",
+      "requests": "",
+      "receiptId": "REC-M6ZYGKIJE",
+      "tableNumber": 20,
+      "_id": "i107niwn0",
+      "createdAt": "2026-03-23T18:27:06.346Z",
+      "status": "Confirmed"
+    }
+  ]
+}

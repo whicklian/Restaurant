@@ -1,15 +1,40 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const Contact = () => {
   const [email, setEmail] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const [feedbackMsg, setFeedbackMsg] = useState('');
+  const [feedbackType, setFeedbackType] = useState('success');
 
-  const handleSubscribe = () => {
-    if (email && email.includes('@')) {
-      alert('Thanks for subscribing! Check your email for confirmation.');
-      setEmail('');
-    } else {
-      alert('Please enter a valid email address');
+  const handleSubscribe = async () => {
+    if (!email || !email.includes('@')) {
+      setFeedbackMsg('Please enter a valid email address.');
+      setFeedbackType('error');
+      return;
     }
+
+    setIsLoading(true);
+    setFeedbackMsg('');
+
+    try {
+      const res = await axios.post('http://localhost:5000/api/newsletter/subscribe', { email });
+      if (res.data.success) {
+        setFeedbackMsg('🎉 Subscribed! Check your inbox for a welcome email.');
+        setFeedbackType('success');
+        setEmail('');
+      }
+    } catch (err) {
+      const msg = err.response?.data?.message || 'Subscription failed. Please try again.';
+      setFeedbackMsg(msg);
+      setFeedbackType('error');
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') handleSubscribe();
   };
 
   return (
@@ -61,9 +86,23 @@ const Contact = () => {
                       placeholder="Your email address" 
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
+                      onKeyDown={handleKeyDown}
+                      disabled={isLoading}
                   />
-                  <button onClick={handleSubscribe}>Subscribe</button>
+                  <button onClick={handleSubscribe} disabled={isLoading}>
+                      {isLoading ? <><i className="fas fa-spinner fa-spin"></i> Subscribing...</> : 'Subscribe'}
+                  </button>
               </div>
+              {feedbackMsg && (
+                  <p style={{
+                      marginTop: '1rem',
+                      color: feedbackType === 'success' ? '#25d366' : '#ff4444',
+                      fontWeight: '500',
+                      fontSize: '0.95rem'
+                  }}>
+                      {feedbackMsg}
+                  </p>
+              )}
           </div>
       </section>
     </>

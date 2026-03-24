@@ -1,0 +1,17 @@
+nohup: ignoring input
+[dotenv@17.3.1] injecting env (8) from .env -- tip: ⚙️  override existing env vars with { override: true }
+Using local JSON storage for database features.
+Node backend running on http://localhost:5000
+SIMULATING STK PUSH (No Daraja Keys Provided). Payload: {
+  BusinessShortCode: '174379',
+  Password: 'MTc0Mzc5YmZiMjc5ZjlhYTliZGJjZjE1OGU5N2RkNzFhNDY3Y2QyZTBjODkzMDU5YjEwZjc4ZTZiNzJhZGExZWQyYzkxOTIwMjYwMzIzMTU1ODE1',
+  Timestamp: '20260323155815',
+  TransactionType: 'CustomerPayBillOnline',
+  Amount: 1,
+  PartyA: '254707848992',
+  PartyB: '174379',
+  PhoneNumber: '254707848992',
+  CallBackURL: 'https://your-public-url.com/api/callback',
+  AccountReference: 'SavoryBites Booking',
+  TransactionDesc: 'Premises Event Booking Payment'
+}
