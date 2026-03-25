@@ -425,8 +425,9 @@ nav {
   background: var(--accent-light);
   height: 400px;
   border-radius: 20px;
-  background-image: url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=600');
+  background-image: url('./assets/chef-story.jpg');
   background-size: cover;
+  background-position: center;
 }
 
 /* gallery */
